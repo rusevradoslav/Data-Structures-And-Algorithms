@@ -1,29 +1,28 @@
 import implementations.ArrayList;
+import implementations.SinglyLinkedList;
+import interfaces.LinkedList;
+import interfaces.List;
+import org.apache.tools.ant.types.resources.First;
 
 import java.lang.reflect.Array;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> data = new ArrayList<>();
-        data.add("1");
-        data.add("2");
-        data.add("3");
-        data.add("4");
-        data.add("5");
-        data.add("6");
+        SinglyLinkedList<String> data = new SinglyLinkedList<>();
+
+        data.addLast("1");
+        data.addLast("2");
+        data.addLast("3");
+        data.addLast("4");
+        data.addLast("5");
+        data.addLast("6");
+        data.addLast("New Node");
 
 
-        System.out.println(data.get(0));
-        System.out.println(data.get(1));
-        System.out.println(data.get(2));
-        System.out.println(data.get(3));
-        System.out.println(data.get(4));
-        System.out.println(data.get(5));
+        System.out.println(data.getLast());
+        System.out.println(data.removeLast());
+        System.out.println(data.getLast());
 
-        data.remove(1);
-        System.out.println();
-        for (int i = 0; i < data.size(); i++) {
-            System.out.println(data.get(i));
-        }
+
     }
 }

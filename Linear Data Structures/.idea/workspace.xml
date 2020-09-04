@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb66ed3-ed77-4a2c-bac9-09501823fd6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +43,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="JUnit.QueueTest">
-    <configuration name="ArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
+    <configuration name="BenchmarkTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="benchmark.BenchmarkTests" />
       <module name="LinearDS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="implementations.*" />
+          <option name="PATTERN" value="benchmark.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.ArrayListTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrayListTest.testRemoveShouldThrowWithInvalidIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="LinearDS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.ArrayListTest" />
-      <option name="METHOD_NAME" value="testRemoveShouldThrowWithInvalidIndex" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LinearDS" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +88,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.StackTest" />
+      <option name="MAIN_CLASS_NAME" value="implementations.SinglyLinkedListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackTest.testPopShouldRemoveAndReturnTopElement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testAddSingleElementInFront" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LinearDS" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +103,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.StackTest" />
-      <option name="METHOD_NAME" value="testPopShouldRemoveAndReturnTopElement" />
+      <option name="MAIN_CLASS_NAME" value="implementations.SinglyLinkedListTest" />
+      <option name="METHOD_NAME" value="testAddSingleElementInFront" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,11 +112,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SinglyLinkedListTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.BenchmarkTests" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testAddSingleElementInFront" />
         <item itemvalue="JUnit.QueueTest" />
-        <item itemvalue="JUnit.StackTest" />
-        <item itemvalue="JUnit.StackTest.testPopShouldRemoveAndReturnTopElement" />
-        <item itemvalue="JUnit.ArrayListTest" />
-        <item itemvalue="JUnit.ArrayListTest.testRemoveShouldThrowWithInvalidIndex" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599032211153</updated>
-      <workItem from="1599032215347" duration="16066000" />
+      <workItem from="1599032215347" duration="24930000" />
     </task>
     <servers />
   </component>
@@ -149,42 +142,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599037976060" />
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1599047031891">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1599233220315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599047031891" />
-    <state width="1877" height="456" key="GridCell.Tab.0.bottom" timestamp="1599048055431">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599233220315" />
+    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1599234764019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="456" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599048055431" />
-    <state width="1877" height="456" key="GridCell.Tab.0.center" timestamp="1599048055430">
+    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599234764019" />
+    <state width="1877" height="115" key="GridCell.Tab.0.bottom" timestamp="1599240422982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="456" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599048055430" />
-    <state width="1877" height="456" key="GridCell.Tab.0.left" timestamp="1599048055430">
+    <state width="1877" height="115" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599240422982" />
+    <state width="1877" height="115" key="GridCell.Tab.0.center" timestamp="1599240422982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="456" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599048055430" />
-    <state width="1877" height="456" key="GridCell.Tab.0.right" timestamp="1599048055430">
+    <state width="1877" height="115" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599240422982" />
+    <state width="1877" height="115" key="GridCell.Tab.0.left" timestamp="1599240422981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="456" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599048055430" />
-    <state width="1877" height="296" key="GridCell.Tab.1.bottom" timestamp="1599043273179">
+    <state width="1877" height="115" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599240422981" />
+    <state width="1877" height="115" key="GridCell.Tab.0.right" timestamp="1599240422982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599043273179" />
-    <state width="1877" height="296" key="GridCell.Tab.1.center" timestamp="1599043273179">
+    <state width="1877" height="115" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599240422982" />
+    <state width="1877" height="245" key="GridCell.Tab.1.bottom" timestamp="1599238856089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599043273179" />
-    <state width="1877" height="296" key="GridCell.Tab.1.left" timestamp="1599043273178">
+    <state width="1877" height="245" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599238856089" />
+    <state width="1877" height="245" key="GridCell.Tab.1.center" timestamp="1599238856089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599043273178" />
-    <state width="1877" height="296" key="GridCell.Tab.1.right" timestamp="1599043273179">
+    <state width="1877" height="245" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599238856089" />
+    <state width="1877" height="245" key="GridCell.Tab.1.left" timestamp="1599238856089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599043273179" />
+    <state width="1877" height="245" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599238856089" />
+    <state width="1877" height="245" key="GridCell.Tab.1.right" timestamp="1599238856089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="245" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1599238856089" />
     <state x="690" y="279" key="extract.method.dialog" timestamp="1599036317669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -212,14 +209,19 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/implementations/ArrayListTest.java</url>
           <line>182</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
