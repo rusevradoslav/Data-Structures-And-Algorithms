@@ -97,4 +97,5 @@ public class DoublyLinkedListTest {
         assertFalse(list.isEmpty());
         assertTrue(new DoublyLinkedList<>().isEmpty());
     }
+
 }

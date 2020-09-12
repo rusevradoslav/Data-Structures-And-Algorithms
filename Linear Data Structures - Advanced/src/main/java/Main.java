@@ -1,22 +1,27 @@
-import implementations.Queue;
-import interfaces.Deque;
+import implementations.DoublyLinkedList;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        Queue queue = new Queue<>();
+        DoublyLinkedList list = new DoublyLinkedList();
 
-        queue.offer(10);
-        queue.offer(11);
-        queue.offer(12);
-        queue.offer(13);
-        System.out.println(queue.poll());
+        list.addFirst("first");
+        list.addFirst("second");
+        list.addFirst("third");
+        list.addFirst("fourth");
 
-        System.out.println("New Queue");
-        for (Object obj : queue) {
-            System.out.println(obj);
+
+        for (Object o : list) {
+            System.out.print(o + " ");
         }
 
+        System.out.println();
+        list.removeLast();
+
+        for (Object o : list) {
+            System.out.print(o + " ");
+        }
 
     }
 }
