@@ -9,9 +9,6 @@ public class ArrayDequeTest {
     @Test
     public void ArrayDeque() {
 
-        ArrayDeque<String> arrayDeque = new ArrayDeque();
-
-        System.out.println(arrayDeque.get("2"));
     }
 
 }
