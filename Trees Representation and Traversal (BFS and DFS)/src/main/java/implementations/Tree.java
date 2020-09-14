@@ -29,34 +29,56 @@ public class Tree<E> implements AbstractTree<E> {
 
         queue.offer(this);
 
-        while (queue.size() > 0){
+        while (queue.size() > 0) {
             Tree<E> current = queue.poll();
             result.add(current.key);
             for (Tree<E> child : current.children) {
                 queue.offer(child);
             }
         }
-            return result;
+        return result;
     }
 
     @Override
     public List<E> orderDfs() {
         List<E> result = new ArrayList<>();
-        this.dfs(this,result);
+        this.dfs(this, result);
         return result;
     }
 
     private void dfs(Tree<E> eTree, List<E> result) {
-
         for (Tree<E> child : eTree.children) {
-            this.dfs(child,result);
+            this.dfs(child, result);
         }
         result.add(eTree.key);
     }
 
     @Override
     public void addChild(E parentKey, Tree<E> child) {
+        Tree<E> search = find(parentKey);
+        if (search == null) {
+            throw new IllegalArgumentException();
+        }
+        search.children.add(child);
+        child.parent = search;
+    }
 
+    private Tree<E> find(E parentKey) {
+
+        Deque<Tree<E>> queue = new ArrayDeque<>();
+
+        queue.offer(this);
+
+        while (queue.size() > 0) {
+            Tree<E> current = queue.poll();
+            if (current.key == parentKey) {
+                return current;
+            }
+            for (Tree<E> child : current.children) {
+                queue.offer(child);
+            }
+        }
+        return null;
     }
 
     @Override
