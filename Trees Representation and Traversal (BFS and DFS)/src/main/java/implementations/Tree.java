@@ -25,6 +25,9 @@ public class Tree<E> implements AbstractTree<E> {
     public List<E> orderBfs() {
 
         List<E> result = new ArrayList<>();
+        if (this.key == null) {
+            return result;
+        }
         Deque<Tree<E>> queue = new ArrayDeque<>();
 
         queue.offer(this);
@@ -83,12 +86,63 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public void removeNode(E nodeKey) {
+        Tree<E> toRemove = find(nodeKey);
+        if (toRemove == null) {
+            throw new IllegalArgumentException();
+        }
 
+        for (Tree<E> child : toRemove.children) {
+            child.parent = null;
+        }
+
+        toRemove.children.clear();
+        Tree<E> parent = toRemove.parent;
+        if (parent != null) {
+            parent.children.remove(toRemove);
+        }
+        toRemove.key = null;
     }
 
     @Override
     public void swap(E firstKey, E secondKey) {
+        System.out.println();
+        Tree<E> firstNode = find(firstKey);
+        Tree<E> secondNode = find(secondKey);
+        if (firstNode == null || secondNode == null) {
+            throw new IllegalArgumentException();
+        }
+        Tree<E> firstParent = firstNode.parent;
+        Tree<E> secondParent = secondNode.parent;
 
+        if (firstParent == null) {
+            swapRoot(secondNode);
+
+            return;
+        }
+        if (secondParent == null) {
+            swapRoot(firstNode);
+
+            return;
+        }
+
+        secondNode.parent = firstParent;
+        firstNode.parent = secondParent;
+
+
+        int firstNodeIndex = this.children.indexOf(firstNode);
+        int secondNodeIndex = this.children.indexOf(secondNode);
+
+        firstParent.children.set(firstNodeIndex, secondNode);
+        secondParent.children.set(secondNodeIndex, firstNode);
+
+
+    }
+
+    private void swapRoot(Tree<E> node) {
+        this.key = node.key;
+        this.parent = null;
+        this.children = node.children;
+        node.parent = null;
     }
 }
 
