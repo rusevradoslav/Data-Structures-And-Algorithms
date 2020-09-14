@@ -2,11 +2,13 @@ package implementations;
 
 import interfaces.AbstractTree;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 public class Tree<E> implements AbstractTree<E> {
-    private  E key ;
+    private E key;
     private Tree<E> parent;
     private List<Tree<E>> children;
 
@@ -21,8 +23,20 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public List<E> orderBfs() {
+        System.out.println();
+        List<E> result = new ArrayList<>();
+        Deque<Tree<E>> queue = new ArrayDeque<>();
 
-        return null;
+        queue.offer(this);
+
+        while (queue.size() > 0){
+            Tree<E> current = queue.poll();
+            result.add(current.key);
+            for (Tree<E> child : current.children) {
+                queue.offer(child);
+            }
+        }
+            return result;
     }
 
     @Override
@@ -34,8 +48,8 @@ public class Tree<E> implements AbstractTree<E> {
     public void addChild(E parentKey, Tree<E> child) {
 
     }
-	
-	@Override
+
+    @Override
     public void removeNode(E nodeKey) {
 
     }
