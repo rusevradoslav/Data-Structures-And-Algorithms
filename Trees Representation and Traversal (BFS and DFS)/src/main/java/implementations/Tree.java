@@ -23,7 +23,7 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public List<E> orderBfs() {
-        System.out.println();
+
         List<E> result = new ArrayList<>();
         Deque<Tree<E>> queue = new ArrayDeque<>();
 
@@ -41,7 +41,17 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public List<E> orderDfs() {
-        return null;
+        List<E> result = new ArrayList<>();
+        this.dfs(this,result);
+        return result;
+    }
+
+    private void dfs(Tree<E> eTree, List<E> result) {
+
+        for (Tree<E> child : eTree.children) {
+            this.dfs(child,result);
+        }
+        result.add(eTree.key);
     }
 
     @Override
